@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Product Store (Admin System)</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+    .dark {
+      background-color: black;
+      color: white;
+    }
+    .product {
+      padding: 10px;
+      border: 1px solid gray;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    #adminPanel {
+      display: none;
+    }
+    #logoutBtn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛍️ My Product Store (Admin Login)</h1>
+
+  <!-- 🔑 Admin Login -->
+  <div id="loginPanel">
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- 🧑‍💼 Admin Panel -->
+  <div id="adminPanel">
+    <input type="text" id="productInput" placeholder="Enter Product Name">
+    <button onclick="addProduct()">Add Product</button>
+    <button onclick="toggleTheme()">🌙 Dark Mode</button>
+    <button id="logoutBtn" onclick="logout()">Logout</button>
+  </div>
+
+  <h2>📦 Product List:</h2>
+  <div id="productList"></div>
+
+  <script src="Updated.js"></script>
+</body>
+</html>
